@@ -66,3 +66,5 @@ df.show()
 # df.groupBy("Item").count().sort("count", ascending=False).show()
 
 # spark.stop()
+
+# if __name__ == "__main__":

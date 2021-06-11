@@ -10,7 +10,7 @@ RUN apk --update add coreutils
 RUN apk add procps
 
 RUN rm -f /usr/bin/python \
-    && ln -s /usr/bin/python3.9 /usr/bin/python \
+    && ln -s /usr/bin/python3.7 /usr/bin/python \
     && pip3 install --upgrade pip
 
 RUN mkdir /tmp/spark-events \

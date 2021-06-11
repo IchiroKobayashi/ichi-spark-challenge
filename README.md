@@ -7,7 +7,7 @@ Make sure you have installed all of the following prerequisites on your developm
 - Docker [- Get Docker](https://docs.docker.com/get-docker/)
 
 ## Versions
-- Python 3.9
+- Python 3.7
 - Apache Spark 3.0.1
 - Apache Hadoop 3.2
 
