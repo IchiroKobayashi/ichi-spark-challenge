@@ -42,6 +42,11 @@ docker exec -it spark-worker-2 bash
 /spark/sbin/start-slave.sh spark://spark-master:7077
 ```
 
+## To access local WebUI (check the details of cluster & master node)
+```
+http://localhost:8080/
+```
+
 ## To execute spark application
 Execute spark application
 ```
