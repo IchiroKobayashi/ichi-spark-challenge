@@ -13,8 +13,9 @@ RUN rm -f /usr/bin/python \
     && ln -s /usr/bin/python3.7 /usr/bin/python \
     && pip3 install --upgrade pip
 
-RUN mkdir /tmp/spark-events \
-    && mkdir /usr/local/lib/jars
+RUN mkdir /tmp/spark-events 
+# \
+    # && mkdir /usr/local/lib/jars
 
 COPY files/etc /etc
 # COPY lib/jars /usr/local/lib/jars

@@ -6,9 +6,6 @@ from pyspark.sql.functions  import *
 conf = SparkConf().setAppName("simpleApp").setMaster("spark://spark-master:7077")
 sc = SparkContext(conf=conf)
 spark = SparkSession.builder.config(conf=sc.getConf()).getOrCreate()
-
-csv_path = "./data/bread_basket.csv"
-
 schema = StructType(
     [
         # At the 3rd variable, set nullable or not
@@ -19,8 +16,9 @@ schema = StructType(
         StructField("weekday_weekend", StringType(), True)
     ]
 )
-
 spark.sql("set spark.sql.legacy.timeParserPolicy=LEGACY")
+
+csv_path = "./data/bread_basket.csv"
 csv_df = (
     spark.read.option("header", True)
     .option("mode", "PERMISSIVE")
